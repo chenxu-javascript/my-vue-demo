@@ -1,0 +1,35 @@
+<template>
+  <div id="app">
+    <router-link to="/index">Go to Foo</router-link>
+    <router-link to="/item">Go to Fitemoo</router-link>
+    <img src="./assets/logo.png" alt="">
+    <router-view/>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  mounted () {
+    console.log(123, this.matchAndUpdate(), this.$router)
+
+    window.addEventListener('hashchange', this.matchAndUpdate)
+  },
+  methods: {
+    matchAndUpdate () {
+      console.log(location.href, 'cx')
+    }
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
