@@ -5,6 +5,7 @@ import todo from '@/components/to-do'
 import index from '@/page/indexed'
 import item from '@/page/item'
 import com from '@/page/com'
+import vuexstore from '@/page/vuexstore'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/com',
       name: 'com',
       component: com
+    },
+    {
+      path: '/vuexstore',
+      name: 'vuexstore',
+      component: vuexstore
     }
   ]
 })

@@ -11,13 +11,10 @@
 export default {
   name: 'App',
   mounted () {
-    console.log(123, this.matchAndUpdate(), this.$router)
-
     window.addEventListener('hashchange', this.matchAndUpdate)
   },
   methods: {
     matchAndUpdate () {
-      console.log(location.href, 'cx')
     }
   }
 }
